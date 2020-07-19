@@ -20,6 +20,6 @@ def CNN5Conv(window):
         out2 = Dense(2, activation='softmax')(out2)
         model = Model(inp, [out1, out2])
         
-        # Compile model
+        # compile model
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy', matthews_correlation])
         return model
