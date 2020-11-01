@@ -8,7 +8,7 @@ This repository is a part of EEG-Emotion Recognition Research.  It manifests mod
 ## Models
 There are 4 CNN architectures (3Conv - 6Conv).  You can see Keras implementation in /typicalModels.  Also, we have tested 3D physical electrode placement.  In this experiment, we had to adjust the models to fit the new input's size.  You can find these modified models in /3DModels.
 
-<table>
+<!-- <table>
   <tr>
     <th>Firstname</th>
     <th>Lastname</th> 
@@ -29,10 +29,7 @@ There are 4 CNN architectures (3Conv - 6Conv).  You can see Keras implementation
     <td>Doe</td>
     <td>80</td>
   </tr>
-</table>
-
-</body>
-</html>
+</table> -->
 
 
 ## Citation
