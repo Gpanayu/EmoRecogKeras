@@ -1,4 +1,6 @@
-# Spatiotemporal Emotion Recognition using Deep CNN Based on EEG during Music Listening (arXiv Oct 2019) [LINK](https://arxiv.org/abs/1910.09719)
+# CNN Implementation for EEG-Emotion Recognition during Music Listening (arXiv Oct 2019) 
+[link](https://arxiv.org/abs/1910.09719)
+
 This repository is a part of EEG-Emotion Recognition Research.  It manifests models used in our experiments.
 
 ![](images/modelGeneral.png)
