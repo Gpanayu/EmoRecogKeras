@@ -1,4 +1,4 @@
-# CNN Implementation for EEG-Emotion Recognition during Music Listening (arXiv Oct 2019) 
+# CNN Implementation for EEG-Emotion Recognition during Music Listening
 [link](https://arxiv.org/abs/1910.09719)
 
 This repository is a part of EEG-Emotion Recognition Research.  It manifests models used in our experiments.
