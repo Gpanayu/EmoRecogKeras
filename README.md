@@ -8,6 +8,8 @@ This repository is a part of EEG-Emotion Recognition Research.  It manifests mod
 ## Models
 There are 4 CNN architectures (3Conv - 6Conv).  You can see Keras implementation in /typicalModels.  Also, we have tested 3D physical electrode placement.  In this experiment, we had to adjust the models to fit the new input's size.  You can find these modified models in /3DModels.
 
+#### Typical models
+
 <table>
   <tr>
     <th colspan=2>3Conv</th>
@@ -16,41 +18,41 @@ There are 4 CNN architectures (3Conv - 6Conv).  You can see Keras implementation
     <th colspan=2>6Conv</th>
   </tr>
   <tr>
-    <td colspan=2>Conv2D 5x5x32</td>
-    <td colspan=2>Conv2D 5x5x32</td>
-    <td colspan=2>Conv2D 5x5x32</td>
-    <td colspan=2>Conv2D 5x5x32</td>
+    <td colspan=2>Conv2D (5x5)x32</td>
+    <td colspan=2>Conv2D (5x5)x32</td>
+    <td colspan=2>Conv2D (5x5)x32</td>
+    <td colspan=2>Conv2D (5x5)x32</td>
   </tr>
   <tr>
-    <td colspan=2>Conv2D 3x3x32</td>
-    <td colspan=2>Conv2D 3x3x32</td>
-    <td colspan=2>Conv2D 2x2x32</td>
-    <td colspan=2>Conv2D 2x2x32</td>
+    <td colspan=2>Conv2D (3x3)x32</td>
+    <td colspan=2>Conv2D (3x3)x32</td>
+    <td colspan=2>Conv2D (2x2)x32</td>
+    <td colspan=2>Conv2D (2x2)x32</td>
   </tr>
   <tr>
     <td colspan=2>MaxPooling2D 2x2</td>
     <td colspan=2>MaxPooling2D 2x2</td>
-    <td colspan=2>Conv2D 2x2x32</td>
-    <td colspan=2>Conv2D 2x2x32</td>
+    <td colspan=2>Conv2D (2x2)x32</td>
+    <td colspan=2>Conv2D (2x2)x32</td>
   </tr>
   <tr>
-    <td colspan=2>Conv2D 3x3x64</td>
-    <td colspan=2>Conv2D 2x2x64</td>
+    <td colspan=2>Conv2D (3x3)x64</td>
+    <td colspan=2>Conv2D (2x2)x64</td>
     <td colspan=2>MaxPooling2D 2x2</td>
     <td colspan=2>MaxPooling2D 2x2</td>
   </tr>
   <tr>
     <td colspan=2>Dropout 0.5</td>
-    <td colspan=2>Conv2D 2x2x64</td>
-    <td colspan=2>Conv2D 2x2x64</td>
-    <td colspan=2>Conv2D 2x2x64</td>
+    <td colspan=2>Conv2D (2x2)x64</td>
+    <td colspan=2>Conv2D (2x2)x64</td>
+    <td colspan=2>Conv2D (2x2)x64</td>
   </tr>
   <tr>
     <td>FC 128x1</td>
     <td>FC 128x1</td>
     <td colspan=2>Dropout 0.5</td>
-    <td colspan=2>Conv2D 2x2x64</td>
-    <td colspan=2>Conv2D 2x2x64</td>
+    <td colspan=2>Conv2D (2x2)x64</td>
+    <td colspan=2>Conv2D (2x2)x64</td>
   </tr>
   <tr>
     <td>Dropout 0.5</td>
@@ -58,7 +60,7 @@ There are 4 CNN architectures (3Conv - 6Conv).  You can see Keras implementation
     <td>FC 128x1</td>
     <td>FC 128x1</td>
     <td colspan=2>Dropout 0.5</td>
-    <td colspan=2>Conv2D 2x1x64</td>
+    <td colspan=2>Conv2D (2x1)x64</td>
   </tr>
   <tr>
     <td>FC 2x1</td>
@@ -68,6 +70,101 @@ There are 4 CNN architectures (3Conv - 6Conv).  You can see Keras implementation
     <td>FC 128x1</td>
     <td>FC 128x1</td>
     <td colspan=2>Dropout 0.5</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>FC 2x1</td>
+    <td>FC 2x1</td>
+    <td>Dropout 0.5</td>
+    <td>Dropout 0.5</td>
+    <td>FC 128x1</td>
+    <td>FC 128x1</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>FC 2x1</td>
+    <td>FC 2x1</td>
+    <td>Dropout 0.5</td>
+    <td>Dropout 0.5</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>FC 2x1</td>
+    <td>FC 2x1</td>
+  </tr>
+</table>
+
+#### 3D models
+
+<table>
+  <tr>
+    <th colspan=2>3Conv</th>
+    <th colspan=2>4Conv</th> 
+    <th colspan=2>5Conv</th>
+    <th colspan=2>6Conv</th>
+  </tr>
+  <tr>
+    <td colspan=2>Conv3D (9x2x3)x32</td>
+    <td colspan=2>Conv3D (9x2x3)x32</td>
+    <td colspan=2>Conv3D (9x2x3)x32</td>
+    <td colspan=2>Conv3D (9x2x3)x32</td>
+  </tr>
+  <tr>
+    <td colspan=2>Conv3D (3x2x3)x32</td>
+    <td colspan=2>Conv3D (3x2x3)x32</td>
+    <td colspan=2>Conv3D (3x2x3)x32</td>
+    <td colspan=2>Conv3D (3x2x3)x32</td>
+  </tr>
+  <tr>
+    <td colspan=2>MaxPooling3D 4x1x1</td>
+    <td colspan=2>MaxPooling3D 4x1x1</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+  </tr>
+  <tr>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+    <td colspan=2>MaxPooling3D 4x1x1</td>
+    <td colspan=2>MaxPooling3D 4x1x1</td>
+  </tr>
+  <tr>
+    <td colspan=2>Dropout 0.5</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+  </tr>
+  <tr>
+    <td>FC 128x1</td>
+    <td>FC 128x1</td>
+    <td colspan=2>Dropout 0.5</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+  </tr>
+  <tr>
+    <td>Dropout 0.5</td>
+    <td>Dropout 0.5</td>
+    <td>FC 128x1</td>
+    <td>FC 128x1</td>
+    <td colspan=2>Dropout 0.5</td>
+    <td colspan=2>Conv3D (3x1x1)x64</td>
+  </tr>
+  <tr>
+    <td>FC 2x1</td>
+    <td>FC 2x1</td>
+    <td>Dropout 0.5</td>
+    <td>Dropout 0.5</td>
+    <td>FC 128x1</td>
+    <td>FC 128x1</td>
+    <td colspan=2>Dropout 0.25</td>
   </tr>
   <tr>
     <td></td>
