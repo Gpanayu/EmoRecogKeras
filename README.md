@@ -8,29 +8,98 @@ This repository is a part of EEG-Emotion Recognition Research.  It manifests mod
 ## Models
 There are 4 CNN architectures (3Conv - 6Conv).  You can see Keras implementation in /typicalModels.  Also, we have tested 3D physical electrode placement.  In this experiment, we had to adjust the models to fit the new input's size.  You can find these modified models in /3DModels.
 
-<!-- <table>
+<table>
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
+    <th colspan=2>3Conv</th>
+    <th colspan=2>4Conv</th> 
+    <th colspan=2>5Conv</th>
+    <th colspan=2>6Conv</th>
   </tr>
   <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
+    <td colspan=2>Conv2D 5x5x32</td>
+    <td colspan=2>Conv2D 5x5x32</td>
+    <td colspan=2>Conv2D 5x5x32</td>
+    <td colspan=2>Conv2D 5x5x32</td>
   </tr>
   <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
+    <td colspan=2>Conv2D 3x3x32</td>
+    <td colspan=2>Conv2D 3x3x32</td>
+    <td colspan=2>Conv2D 2x2x32</td>
+    <td colspan=2>Conv2D 2x2x32</td>
   </tr>
   <tr>
-    <td>John</td>
-    <td>Doe</td>
-    <td>80</td>
+    <td colspan=2>MaxPooling2D 2x2</td>
+    <td colspan=2>MaxPooling2D 2x2</td>
+    <td colspan=2>Conv2D 2x2x32</td>
+    <td colspan=2>Conv2D 2x2x32</td>
   </tr>
-</table> -->
-
+  <tr>
+    <td colspan=2>Conv2D 3x3x64</td>
+    <td colspan=2>Conv2D 2x2x64</td>
+    <td colspan=2>MaxPooling2D 2x2</td>
+    <td colspan=2>MaxPooling2D 2x2</td>
+  </tr>
+  <tr>
+    <td colspan=2>Dropout 0.5</td>
+    <td colspan=2>Conv2D 2x2x64</td>
+    <td colspan=2>Conv2D 2x2x64</td>
+    <td colspan=2>Conv2D 2x2x64</td>
+  </tr>
+  <tr>
+    <td>FC 128x1</td>
+    <td>FC 128x1</td>
+    <td colspan=2>Dropout 0.5</td>
+    <td colspan=2>Conv2D 2x2x64</td>
+    <td colspan=2>Conv2D 2x2x64</td>
+  </tr>
+  <tr>
+    <td>Dropout 0.5</td>
+    <td>Dropout 0.5</td>
+    <td>FC 128x1</td>
+    <td>FC 128x1</td>
+    <td colspan=2>Dropout 0.5</td>
+    <td colspan=2>Conv2D 2x1x64</td>
+  </tr>
+  <tr>
+    <td>FC 2x1</td>
+    <td>FC 2x1</td>
+    <td>Dropout 0.5</td>
+    <td>Dropout 0.5</td>
+    <td>FC 128x1</td>
+    <td>FC 128x1</td>
+    <td colspan=2>Dropout 0.5</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>FC 2x1</td>
+    <td>FC 2x1</td>
+    <td>Dropout 0.5</td>
+    <td>Dropout 0.5</td>
+    <td>FC 128x1</td>
+    <td>FC 128x1</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>FC 2x1</td>
+    <td>FC 2x1</td>
+    <td>Dropout 0.5</td>
+    <td>Dropout 0.5</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>FC 2x1</td>
+    <td>FC 2x1</td>
+  </tr>
+</table>
 
 ## Citation
 If you find the code useful for your research, please cite our paper:
